@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Bài 1: Viết chương trình cho phép nhập vào số n.\n" +
@@ -12,6 +13,10 @@ public class Main {
             System.out.println("Hiển thị các số nguyên tố nhỏ hơn " + n + ".");
             System.out.print(2);
         }
+        System.out.println("\nCó tất cả " + checkPrime(n) + " số nguyên tố.");
+    }
+
+    public static int checkPrime(int n) {
         int count = 1;
         for (int i = 3; i <= n; i++) {
             int check = 0;
@@ -25,6 +30,7 @@ public class Main {
                 count++;
             }
         }
-        System.out.println("\nCó tất cả "+count+" số nguyên tố.");
+        return count;
     }
+
 }
